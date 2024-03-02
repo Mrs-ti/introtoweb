@@ -1,13 +1,23 @@
 *{
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+#container{
+    max-width: 100%;
+    height: 100vh;
+}
+
 
 .navbar{
     width: 100%;
-    background-color: deepskyblue;
+    background-color: aquamarine;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
 }
 
 .navbar li{
@@ -16,70 +26,170 @@
 
 .navbar li a{
     text-decoration: none;
-    margin: 15px;
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+    transition: all .50s;
 }
 
-
-#container{
-    max-width: 100%;
-    height: 100vh;
+.navbar li a:hover{
+    color: red;
 }
+
+.logo p{
+    font-size: 30px;
+    font-weight: 900;
+}
+
 
 #home{
-    background-color: black;
-    color: white;
-    height: 100%;
-}
-
-.title, .name, .proffession{
-    display: flex;
-    justify-content: center;
-}
-
-.title p, .name p, .proffession p{
-    margin: 15px;
-}
-
-.name{
-    margin-top: 200px;
-}
-
-.name p {
-    font-size: 40px;
-    font-weight: 900;
-    color: aquamarine;
-}
-
-
-#about{
-    width: 100%;
-    height: 50vh;
-    background-color: white;
+    max-width: 100%;
+    height: 80vh;
+    background-image: url(images/bg2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: azure;
 }
 
-.about-content{
+.center-made>div{
+    display: flex;
+    justify-content: center;
+}
+
+.home-wrapper{
+    height: 400px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.school p{
+    width: 400px;
+}
+
+
+.center-made{
+    height: 300px;
+    width: 300px;
     text-align: center;
+    align-items: center;
+    line-height: 2.5;
+}
+
+#home p{
+    font-weight: 800;
+    color: white;
+    font-size: 20px;
 }
 
 
+
+
+
+#about{
+    max-width: 100%;
+    height: 90vh;
+    background-image: url(images/bg1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-grid{
+    display: grid;
+    height: 350px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 30px;
+}
+
+.photo{
+    background-image: url(images/my-picture.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid red;
+    box-shadow: 12px 12px 12px red;
+}
+.about-me p{
+    color: white;
+    font-weight: 800;
+    line-height: 2;
+}
 
 .about-title{
     display: flex;
     justify-content: center;
-    color: aquamarine;
 }
+
+.about-title h1{
+    color: white;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
 
 #contact{
-    height: 60vh;
-    width: 100vw;
-    background-color: black;
+    background-image: url(images/bg3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#contact>div{
+    display: flex;
+    justify-content: center;
+}
+
+form>div{
+    display: flex;
+    justify-content: center;
+}
+
+#contact input, button{
+    width: 220px;
+    height: 30px;
+    margin: 10px;
+}
+
+button{
+    cursor: pointer;
+    background-color:aquamarine;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    transition: all .50s;
+}
+
+button:hover{
+    background-color:rgb(7, 150, 103);
+    font-weight: 800;
+}
+
+
+.form-title{
+    font-size: 30px;
+    font-weight: 900;
+    color: orangered;
+}
+
+input:focus, textarea:focus{
+    outline: none;
 }
 
 
 
+input::placeholder, textarea::placeholder{
+    font-weight: 800;
+    color: black;
+}
 
 
