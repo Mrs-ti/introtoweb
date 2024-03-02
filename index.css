@@ -1,0 +1,85 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.navbar{
+    width: 100%;
+    background-color: deepskyblue;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li{
+    display: inline-block;
+}
+
+.navbar li a{
+    text-decoration: none;
+    margin: 15px;
+}
+
+
+#container{
+    max-width: 100%;
+    height: 100vh;
+}
+
+#home{
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+.title, .name, .proffession{
+    display: flex;
+    justify-content: center;
+}
+
+.title p, .name p, .proffession p{
+    margin: 15px;
+}
+
+.name{
+    margin-top: 200px;
+}
+
+.name p {
+    font-size: 40px;
+    font-weight: 900;
+    color: aquamarine;
+}
+
+
+#about{
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+
+.about-content{
+    text-align: center;
+}
+
+
+
+.about-title{
+    display: flex;
+    justify-content: center;
+    color: aquamarine;
+}
+
+#contact{
+    height: 60vh;
+    width: 100vw;
+    background-color: black;
+}
+
+
+
+
+
