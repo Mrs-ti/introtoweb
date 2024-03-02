@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atiyah's World!</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css"><!---my css link-->
 </head>
 <body>
    <div id="container">
         <div class="navbar">
             <div class="logo">
-                <p>ATIYAH</p>
+                <p class="my-name">ATIYAH</p>
             </div>
             <div class="links">
                 <ul>
                     <li><a href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#about">ABOUT</a></li><!--navigation links-->
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
@@ -27,20 +27,46 @@
                         <p>My name is Atiyah Salahuddin</p>
                     </div>
                     <div class="major">
-                        <p>Cybersecurity Professional/Soon to be Expert</p>
+                        <p>Cybersecurity Professional, Soon to be Expert</p>
                     </div>
-                    <div class="school">
-                        <p>Hello, my name is Atiyah Salahuddin and I am currently a senior at Kennesaw State University. It's been a long year but well serverd. I will soon be obtaining my Bachelor’s degree in Cybersecurity in May. In addition to my major, I will have a minor in Information Technology. I also have an Associate Degree in applied science. I started of my bachelor's degree journey in Nursing at Georgia State University. I took a few medical courses which I thoroughly enjoyed. As life changes happen to us all, I decided to take a break to focus on myself and my next steps before I had an epiphany that I needed to get back into school and do something with computers. Well, fast forward to today, and several semesters later, here I am at the finish line! 
-A little bit about me, I come from a family of six, me being the youngest girl out of the bunch. I am originally from New Jersey. A few years ago, after obtaining my first degree, I decided I wanted a change of environment and some new scenery. That is when I decided to pack up and move to Atlanta. This was one of the best decisions I could make for my journey. Atlanta has exposed me to so much and afforded me many great opportunities. 
-Regarding my professional background, I come from the world of Fraud and Finance. I started banking right after graduating high school. When I moved to Atlanta I decided to keep my career path in banking, and I also decided to go into retail. While managing the two jobs, I realized I was ready to get back into school. During my banking career, I was given the opportunity to move into Corporate and transition into the Fraud Detection field. I have over 10+ years of fraud experience. I currently still hold a career in this field. In May, I will be transitioning into Cybersecurity for my new career path. I aim to try a little of everything in the cyber field and see what I am truly passionate about most. I do not want to limit myself. Therefore, I want to see the ins and outs of every part of this world to see what I fall in love with most. Once I get that under my belt, my goal is to open my own consulting business within the cybersecurity field to help organizations stay protected. 
-
-
-                        </p>
-                    </div>
+                </div>
+                <div class="school"><!---paragraph about me-->
+                    <p>
+                        <span>Hello</span> I am currently a senior at 
+                            Kennesaw State University. It's been a long year but well serverd. 
+                            I will soon be obtaining my Bachelor’s degree in Cybersecurity in 
+                            May. In addition to my major, I will have a minor in Information Technology. 
+                            I also have an Associate Degree in applied science. I started of my bachelor's
+                             degree journey in Nursing at Georgia State University. I took a few medical
+                              courses which I thoroughly enjoyed. As life changes happen to us all, 
+                              I decided to take a break to focus on myself and my next steps before 
+                              I had an epiphany that I needed to get back into school and do something
+                               with computers. Well, fast forward to today, and several semesters later,
+                                here I am at the finish line! 
+                        A little bit about me, I come from a family of six, me being the youngest
+                         girl out of the bunch. I am originally from New Jersey. A few years ago, 
+                         after obtaining my first degree, I decided I wanted a change of environment 
+                         and some new scenery. That is when I decided to pack up and move to Atlanta.
+                          This was one of the best decisions I could make for my journey. Atlanta 
+                          has exposed me to so much and afforded me many great opportunities. 
+                         Regarding my professional background, I come from the world of Fraud and Finance.
+                         I started banking right after graduating high school. When I moved to Atlanta 
+                         I decided to keep my career path in banking, and I also decided to go into retail.
+                          While managing the two jobs, I realized I was ready to get back into school.
+                           During my banking career, I was given the opportunity to move into Corporate 
+                           and transition into the Fraud Detection field. I have over 10+ years of fraud 
+                           experience. I currently still hold a career in this field. In May, I will
+                            be transitioning into Cybersecurity for my new career path. I aim to try a
+                             little of everything in the cyber field and see what I am truly passionate
+                              about most. I do not want to limit myself. Therefore, I want to see the ins 
+                              and outs of every part of this world to see what I fall in love with most.
+                               Once I get that under my belt, my goal is to open my own consulting business 
+                               within the cybersecurity field to help organizations stay protected. 
+                    </p>
                 </div>
             </div>
         </div>
-        <div id="about">
+        <div id="about"><!----abouts page-->
             <div class="about-title">
                 <h1>About</h1>
             </div>
@@ -60,9 +86,9 @@ Regarding my professional background, I come from the world of Fraud and Finance
             <div class="form-title">
                 <p>Contact Atiyah<span><i class="fa fa-phone" aria-hidden="true"></i></span></p>
             </div>
-            <form>
+            <form id="contact-form" method="post" action="mailto:ekemasamuel954@gmail.com"><!---contact form-->
                 <div class="name">
-                    <input type="text" name="" id="name" placeholder="First-Name Last-Name" required>
+                    <input type="text" name="" id="name" placeholder="Enter Name" required>
                 </div>
                 <div class="email">
                     <input type="email" name="" id="email" placeholder="Enter Email" required>
@@ -71,10 +97,12 @@ Regarding my professional background, I come from the world of Fraud and Finance
                     <textarea name="" id="" cols="30" rows="10" placeholder="Enter message here"></textarea>
                 </div>
                 <div class="submit">
-                    <button>Submit</button>
+                    <button type="submit">Submit</button><!---submit button when user clicks, it opens email-->
                 </div>
             </form>
         </div>
    </div>
+
+   <script src="index.js"></script>
 </body>
 </html>

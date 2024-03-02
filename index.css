@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;  /***reset to default padding and margin***/
 }
 
 #container{
@@ -15,9 +15,11 @@
     background-color: aquamarine;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;   /***my navbar***/
     position: fixed;
     z-index: 1000;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .navbar li{
@@ -33,12 +35,13 @@
 }
 
 .navbar li a:hover{
-    color: red;
+    color: red;   /****add color change on hover***/
 }
 
 .logo p{
     font-size: 30px;
     font-weight: 900;
+    color: red;
 }
 
 
@@ -47,7 +50,7 @@
     height: 80vh;
     background-image: url(images/bg2.jpg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    /****my home page****/
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -56,7 +59,7 @@
 
 .center-made>div{
     display: flex;
-    justify-content: center;
+    justify-content: center;  /****center all the divs in home page***/
 }
 
 .home-wrapper{
@@ -67,8 +70,36 @@
     align-items: center;
 }
 
+.school{
+    border: solid white;
+    width: 100%;
+    height: 50vh;
+    overflow-y: scroll;    /***since my paragraph was too long, i added overflow property***/
+    box-shadow: 10px 10px 10px royalblue;
+
+}
+
 .school p{
-    width: 400px;
+    text-align: center;
+}
+
+.school span{
+    display: flex;
+    justify-content: center;
+}
+
+.myclasslist{
+    text-shadow: 
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    5px 5px 2px red;
 }
 
 
@@ -93,7 +124,7 @@
 #about{
     max-width: 100%;
     height: 90vh;
-    background-image: url(images/bg1.jpg);
+    background-image: url(images/bg1.jpg); /***background image***/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,15 +134,14 @@
     display: grid;
     height: 350px;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr;    /***create grid in about section****/
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 30px;
 }
 
 .photo{
-    background-image: url(images/site\ pic.jpg);
-    background-position: center;
+    background-image: url(images/site\ pic.jpg);  /***my picture****/
     background-repeat: no-repeat;
     background-size: cover;
     border: solid red;
@@ -169,7 +199,7 @@ button{
     transition: all .50s;
 }
 
-button:hover{
+button:hover{/***set button stlyes to activate on hover****/
     background-color:rgb(7, 150, 103);
     font-weight: 800;
 }
@@ -181,14 +211,18 @@ button:hover{
     color: orangered;
 }
 
-input:focus, textarea:focus{
+input:focus, textarea:focus{/****remove input outline***/
     outline: none;
+}
+
+input, textarea{
+    padding-left: 20px;
 }
 
 
 
-input::placeholder, textarea::placeholder{
-    font-weight: 800;
+input::placeholder, textarea::placeholder{ /*****create custom styles to placeholders.***/
+    font-weight: 500;
     color: black;
 }
 
