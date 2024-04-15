@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atiyah</title>
+    <link rel="stylesheet" href="index.css"><!--css stylesheet ref link-->
+</head>
+<body>
+    <div id="container"><!---page container where all content will be placed in-->
+        <nav><!---navbar--->
+            <div class="name">
+                <h1 class="logo">ATIYAH SALAHUDDIN</h1>
+            </div>
+            <ul>
+                <div class="nav-links">
+                    <li><a href='#home'>HOME</a></li>
+                    <li><a href='#about'>ABOUT</a></li>
+                    <li><a href='#contact'>CONTACT</a></li>
+                </div>
+            </ul>
+        </nav><!---nav end-->
+        <div id="home"><!---home page-->
+            <h1>Hey There<span>👋</span></h1><!---added span element to seperate emoji from text-->
+            <!--add ball animation-->
+            <div class="ball"></div>
+        </div>
+
+        <!---about page-->
+        <section id="about">
+            <div class="about-title">
+                <h1>ABOUT</h1>
+            </div>
+            <div class="about-grid">
+                <div class="my-picture">
+                    <img src="images/site_pic-transformed.png">
+                </div>
+                <div class="about-me-text">
+                    <p> A little bit about me, I come from a family of six, me being the youngest
+                        girl out of the bunch. I am originally from New Jersey. A few years ago, 
+                        after obtaining my first degree, I decided I wanted a change of environment 
+                        and some new scenery. That is when I decided to pack up and move to Atlanta.
+                         This was one of the best decisions I could make for my journey. Atlanta 
+                         has exposed me to so much and afforded me many great opportunities. 
+                        Regarding my professional background, I come from the world of Fraud and Finance.
+                        I started banking right after graduating high school.
+                    </p>
+                </div>
+                <div class="showme">
+                    <button id="see"> See me</button>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contact-title">
+                <h1>Contact Atiyah</h1>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form" method="post" action="/submit-form"><!---contact form-->
+                    <div class="name">
+                        <input type="text" name="name" id="name" placeholder="Enter Name" required>
+                    </div>
+                    <div class="email">
+                        <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                    </div>
+                    <div class="message">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Enter message here"></textarea>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Submit</button><!---submit button when user clicks, it opens email-->
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div><!--container end-->
+    <script src="index.js"></script> <!---JAVASCRIPT LINK-->
+    <script src="app.js"></script>
+</body>
+</html>
