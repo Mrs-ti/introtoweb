@@ -1,3 +1,4 @@
+changeColor();
 function changeColor(){
     const logo = document.querySelector(".logo");
     if (logo.style.color == 'white') {
@@ -10,15 +11,17 @@ function changeColor(){
     setTimeout(changeColor, 1000);
 }
 
-changeColor();
 
+//menuClicked
+menuClicked();
+function menuClicked(){
+    const menuBar = document.querySelector(".menu-bar");
+    const dropdown = document.querySelector(".dropdown");
+    const wrapper = document.querySelector(".dropdown-wrapper");
+    menuBar.addEventListener("click", ()=>{
+        menuBar.classList.toggle("change"); //toggle classlist
+        dropdown.classList.toggle("changeHeight");
+        wrapper.classList.toggle("changeOpacity");
+    })
+}
 
-
-const mybutton = document.getElementById("see");
-mybutton.addEventListener("click", function(){
-    const imageEl = document.querySelector(".my-picture");
-    const textEl = document.querySelector('.about-me-text');
-    textEl.classList.toggle("textclass");
-    imageEl.classList.toggle("imageclass");
-
-})

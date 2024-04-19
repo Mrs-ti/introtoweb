@@ -1,0 +1,326 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  /***reset to default padding and margin***/
+}
+
+html{
+    background-color: black;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    color: white;
+    background-color: orangered;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px 0 15px;
+    z-index: 1000;  /***PREVERNT PAGE CONTENT FROM OVERLAYING ONTOP OF NAVBAR***/
+} 
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    list-style: none;    /**REMOVE DEFAULT TEXT DECORETION FROM LINKS***/
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none; /**REMOVE DEFAULT TEXT DECORETION FROM LINKS***/
+    margin: 13px;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    transition: all .50s;
+}
+
+nav ul li a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+
+
+
+#home{
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /***MAKE CONTENT IN INTRO PAGE ALOGN IN THE CENTER**/
+    align-items: center;
+    color: white;
+}
+
+#home h1, #about h1, .contact-title h1{
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    3px 2px 3px orangered;
+    animation: show 5s;
+}
+
+@keyframes show{
+    0%{opacity: .30;
+        word-spacing: 40px;
+    }  /**MADE H1 TEXT GAIN OPACITY EVERY SECOND UNTILL IT REACHES 1***/
+    100%{opacity: 1;}
+}
+
+.ball{ /***create a round ball***/
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: orangered;
+    opacity: .50;
+    animation: animate 6s;
+    animation-iteration-count: infinite;/**SET INFINITE TO REPEAT**/
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate{ /***added animation to move the ball to different XY position***/
+    5%{transform: translate(-100px,100px);}
+    25%{transform: translate(-120px, 80px);}
+    90%{transform: translate(-450px, -250px);}
+}
+
+
+/**ABOUT SECTION***/
+    #about{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-grid{
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        color: white;
+    }
+
+
+    .about-me-wrapper{
+        width: 100%;
+        background-color: black;
+        padding: 0 10px 0 10px;
+    }
+
+    .about-me-wrapper>div{
+        margin: 25px;
+        text-align: center;
+    }
+
+
+    .about-title{
+        display: flex;
+        justify-content: center;
+    }
+    .picture{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .picture img{
+        width: 400px;
+        height: 500;
+    }
+
+    .about-content{
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px 0 20px;
+        background-color: black;
+    }
+
+    
+
+
+/***SECTION PAGE CONTACT****/
+
+#contact{
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(images/bg3.jpg);
+}
+
+.contact-title{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    color: white;
+}
+
+
+.contact-form{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 25%;
+}
+
+form>div{
+    display: flex;
+    justify-content: center;   /****CENTER THE INPUT BOXES****/
+    margin: 20px;
+}
+
+input, button{
+    width: 200px;
+    height: 35px;   /**ADUST WIDTH AND HEIGHT FOR INPUT AND BUTTON ELEMENTS****/
+}
+
+
+input:focus, textarea:focus{
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+    transition: all .50s;
+    background-color: orangered;
+    color: white;
+    font-weight: 700;
+    border: none;
+}
+
+button:hover{ /***CHANGE BACKGROUND ON HOVER***/
+    background-color: rgb(235, 69, 8);
+}
+
+
+.myclasslist{
+    font-weight: 900;
+    text-shadow: 
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    0px 0px 1px black,
+    3px 2px 3px orangered;
+}
+
+
+
+@media(max-width:864px){
+    .about-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+}
+
+
+
+
+
+/***menubar***/
+.menu-bar{
+    cursor: pointer;
+    display: none;
+}
+
+.bar{
+    width: 25px;
+    height: 4px;
+    margin: 4px;
+    background-color: black;
+    transition: all .50s;
+}
+
+.change .bar1{
+    transform: translate(0, 11px)rotate(45deg);
+}
+
+.change .bar2{
+    opacity: 0;
+}
+
+.change .bar3{
+    transform: translate(0, -6px)rotate(-45deg);
+}
+
+
+@media(max-width:664px) {
+    nav .nav-links{
+        display: none;
+    }
+    .menu-bar{
+        display: inline-block;
+    }
+    
+    .logo{
+        font-size: 15px;
+    }
+}
+
+
+
+.dropdown{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 45px;
+    transition: all .50s;
+
+}
+
+.changeHeight{
+    height: 200px;
+}
+
+
+.dropdown li{
+    margin: 20px;
+    list-style: none;
+}
+
+.dropdown li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all .50s;
+}
+
+
+.dropdown-wrapper{
+    display: none;
+}
+
+.changeOpacity{
+    display: inline-block;
+}
+
+.dropdown li a:hover{
+    text-decoration: underline;
+}
