@@ -239,6 +239,10 @@ button:hover{ /***CHANGE BACKGROUND ON HOVER***/
 }
 
 
+.contact-form input, textarea{
+    padding-left: 10px !important;
+}
+
 
 
 
